@@ -4,7 +4,7 @@ require 'soap/mapping'
 # hack to improve the .Net interoperability
 class SOAP::Mapping::Object
   def each_pair
-    self.__xmlele.each { |n, v| yield n.name, v.to_s }
+    self.__xmlele.each { |n, v| yield n.name, v }
   end
 end
 
